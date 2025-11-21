@@ -1,0 +1,29 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Create Post</title>
+   <link href="{% static 'summernote/summernote.min.css' %}" rel="stylesheet">
+</head>
+<body>
+   <h1>Create Post</h1>
+   <form method="post">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <button type="submit">Save</button>
+   </form>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="{% static 'summernote/summernote.min.js' %}"></script>
+   <script>
+       $(document).ready(function() {
+           $('textarea').summernote({
+               height: 200
+           });
+       });
+   </script>
+</body>
+</html>
