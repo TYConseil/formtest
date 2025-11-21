@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6i#=kcj_n9$*^yq#%#t%k1w!4n*@y1g-+5yr1r+juun8$n8j^7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -152,4 +152,5 @@ SUMMERNOTE_CONFIG = {
 }
  
 X_FRAME_OPTIONS = "SAMEORIGIN"
+
 
